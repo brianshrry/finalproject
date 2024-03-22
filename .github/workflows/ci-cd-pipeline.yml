@@ -1,0 +1,16 @@
+name: Cypress test
+on: push
+jobs: 
+  cypress-run:
+  #environment Linux ex:windows or mac 
+    runs-on: ubuntu-22.04
+  #run parallel
+    strategy: 
+      fail-fast: false 
+      matrix:
+        containers: [1]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
