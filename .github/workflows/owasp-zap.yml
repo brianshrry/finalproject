@@ -1,0 +1,18 @@
+name: "ZAP Baseline Scan #1"
+on: push
+jobs:
+  zap_scan:
+    runs-on: ubuntu-latest
+    name: scan contact list app on heroku
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2 #v4.0.0
+        with:
+          ref: main
+      - name: ZAP Scan
+        uses: zaproxy/action-baseline@v0.3.0 # v0.9.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target: 'https://thinking-tester-contact-list.herokuapp.com/'
+          rules_file_name: '.zap/rules.tsv'
+          cmd_options: '-a -j'
