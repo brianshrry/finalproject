@@ -6,9 +6,9 @@ describe("creating user account", () => {
           body: {
             "firstName": "test",
             "lastName": "user",
-            "email": "test123@fake123.com",
+            "email": "test321@fake321.com",
             "password": "password"
         }
     })
   })
-});
+})
