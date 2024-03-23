@@ -24,6 +24,7 @@ describe("contact list app", () => {
         cy.get('#submit').click()
         // ^ edit contact
         cy.get('#logout').click()
+        cy.visit("https://thinking-tester-contact-list.herokuapp.com/logout")
         // ^ logout
         cy.get('#signup').click()
         cy.get('#email').type("email@address")
