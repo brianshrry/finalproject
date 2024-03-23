@@ -96,6 +96,9 @@ describe('API Tests', () => {
     cy.request({
       method: 'PATCH',
       url: 'https://thinking-tester-contact-list.herokuapp.com/contacts/65fcf3cbdba27800134776da',
+      headers: {
+        Authorization: 'Bearer ' + token,
+      },
       body: {
         "firstName": "last",
         "lastName": "first"
