@@ -10,6 +10,5 @@ jobs:
       - name: ZAP Baseline Scan
         uses: zaproxy/action-baseline@v0.9.0
         with:
-          email: ${{ secrets.ZAP_EMAIL }}
-          password: ${{ secrets.ZAP_PASSWORD }}
+          token: ${{ secrets.ZAP_TOKEN }}
           target: 'https://thinking-tester-contact-list.herokuapp.com/'
