@@ -17,7 +17,7 @@ describe("contact list app", () => {
         cy.get(':nth-child(3) > :nth-child(2)').click()
         cy.get('#delete').click()
         // ^ delete contact
-        cy.get('.contactTableBodyRow > :nth-child(2)').click()
+        cy.get(':nth-child(4) > :nth-child(2)').click()
         cy.get('#edit-contact').click()
         cy.get('#firstName').clear().type('last')
         cy.get('#lastName').clear().type('first')
