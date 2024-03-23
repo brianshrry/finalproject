@@ -6,11 +6,11 @@ jobs:
     name: scan contact list app on heroku
     steps:
       - name: Checkout
-        uses: actions/checkout@v2 #v4.0.0
+        uses: actions/checkout@v2
         with:
           ref: main
       - name: ZAP Scan
-        uses: zaproxy/action-baseline@v0.3.0 # v0.9.0
+        uses: zaproxy/action-baseline@v0.9.0 # Update the version to the latest available
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           target: 'https://thinking-tester-contact-list.herokuapp.com/'
