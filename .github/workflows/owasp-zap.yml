@@ -10,9 +10,9 @@ jobs:
         with:
           ref: main
       - name: ZAP Scan
-        uses: zaproxy/action-baseline@v0.9.0 # Update the version to the latest available
+        uses: zaproxy/action-baseline@v0.9.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ZAP_PAT }} # Use your newly created personal access token
           target: 'https://thinking-tester-contact-list.herokuapp.com/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a -j'
