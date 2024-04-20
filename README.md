@@ -1,6 +1,12 @@
 ﻿# finalproject
+The formatting on this makes it easiest to read as a raw file: https://raw.githubusercontent.com/brianshrry/finalproject/main/README.md
+
 This repository includes a test suite for the Thinking Tester Contact List App through Heroku. It's as comprehensively designed as it could be,
 given my beginner's experience level.
+
+The relevant files to this can all be found in the .github/workflows and cypress/e2e folders.
+https://github.com/brianshrry/finalproject/tree/main/.github/workflows
+https://github.com/brianshrry/finalproject/tree/main/cypress/e2e
 
 Four of the API tests consistently fail:
 	PUT update contact because there seems to be no correct birthday format, xx-xx-xxxx or xx/xx/xxxx.
